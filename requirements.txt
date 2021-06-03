@@ -2,5 +2,5 @@ numpy==1.19.5
 Flask==2.0.1
 urllib3==1.26.5
 Pillow==8.2.0
-tensorflow-cpu==2.1.0
+tensorflow==1.15
 
