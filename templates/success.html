@@ -1,0 +1,92 @@
+
+
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href={{url_for('static' , filename = 'css/normalize.css')}}>
+        <link rel="stylesheet" href={{url_for('static' , filename = 'css/grid.css')}}>
+        <link rel='stylesheet' href={{url_for('static' , filename = 'css/styleSucc.css')}}>
+        
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet" type='text/css'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <title>Results Page</title>
+
+        <style type="text/css">
+            th{
+                text-align: center;
+                font-size: 20px;
+            }
+
+            td{
+                text-align: center;
+                font-size: 18px;
+            }
+	*{transition:all 0.3s ease-in-out;}
+
+	.container{
+  	clear:both;
+  	overflow:auto;
+	}
+
+	nav{float:right;}
+
+	.logo img{float:left;}
+
+	ul li{
+  	display: inline-block; padding:10px;
+  	font-size:20px; font-family:raleway;
+	}
+
+	ul li:hover{
+  	color:orange;
+	  
+	}
+
+	section{
+	background: rgb(0,0,0);
+background: linear-gradient(90deg, rgba(72,72,212,0.7766456924566701) 32%, rgba(34,23,241,0.7122199221485469) 63%, rgba(0,212,255,1) 100%);
+
+	}
+        </style>
+    </head>
+    <body>
+<section>
+        <div class="container">
+<div class="logo">
+  <img src="https://github.com/01fe18bcs127/sample-news-app/blob/master/spicer-logo.png?raw=true" alt="" width=300px />
+  </div>
+<nav>
+  <ul>
+  <li>
+	<a href="/">Homepage</a>
+  </li>
+  </ul>
+  </nav>
+</div>
+<hr />
+</section>
+            <div class = "header">
+                <row style = "width: 100% ; display: flex; justify-content: center;">
+                    <h3 class="header-text">Uploaded Image</h3>
+                </row>
+                <row style = "width: auto ; display: flex; justify-content: center;">
+                    <img class = "result-img" src={{url_for('static', filename = 'images/'+ img)}}>
+                </row>
+            </div>
+
+            <div class = "info">
+            
+                <row style = "width: 100% ; display: flex; justify-content: center;">
+                    <h3 class = "header-text">Model Prediction</h3>
+                </row>
+                <row style = "width: 100%; display: flex; justify-content: center;">
+			<p class="text-center"> Image is a {{ predictions.class }} with Probability of {{ predictions.prob }} </p>
+                    
+                </row>
+            </div>
+        </div>
+
+    </body>
+</html>
